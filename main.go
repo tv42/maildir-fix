@@ -75,12 +75,12 @@ func processDepot(logger *log.Logger, depot string) (ok bool) {
 				ok = ok && ok2
 			}
 		}
+		if err == io.EOF {
+			break
+		}
 		if err != nil {
 			logger.Printf("error listing depot: %v", err)
 			ok = false
-			break
-		}
-		if err == io.EOF {
 			break
 		}
 	}
