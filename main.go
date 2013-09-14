@@ -48,7 +48,7 @@ func processMaildir(logger *log.Logger, maildir string) (ok bool) {
 	for _, child := range []string{"cur", "new", "tmp"} {
 		err := os.Mkdir(filepath.Join(maildir, child), 0700)
 		if err != nil && !os.IsExist(err) {
-			logger.Printf("%v", err)
+			logger.Printf("error processing maildir: %v", err)
 			ok = false
 		}
 	}
