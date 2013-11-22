@@ -26,7 +26,7 @@ Git hooks
 
 You can make `git` run `maildir-fix` automatically, by creating the
 [git hooks](https://www.kernel.org/pub/software/scm/git/docs/githooks.html)
-`post-merge` and `post-checkout` with the following:
+`post-checkout`, `post-merge` and `post-rewrite` with the following:
 
 ```
 #!/bin/sh
