@@ -22,12 +22,6 @@ import (
 	"path/filepath"
 )
 
-func fixDepot(path string) {
-}
-
-func fixMaildir(path string) {
-}
-
 var prog = filepath.Base(os.Args[0])
 
 func usage() {
